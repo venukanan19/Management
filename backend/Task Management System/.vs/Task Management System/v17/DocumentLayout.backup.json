@@ -1,0 +1,360 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\task management system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:task management system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:repositories\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:repositories\\interfaces\\itaskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:repositories\\implementations\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\repositories\\implementations\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:repositories\\implementations\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:models\\taskitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\changestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\changestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\createtaskitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\createtaskitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\createuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\taskitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\taskitemresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\updatetaskitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\updatetaskitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\dtos\\userwithtasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:dtos\\userwithtasksdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\service\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:service\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\service\\implementations\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:service\\implementations\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\service\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:service\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|z:\\activity main folder\\taskmanagement system\\backend\\task management system\\service\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E69C3260-2ED1-4492-9143-444934A21FAA}|Task Management System.csproj|solutionrelative:service\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:50:42.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "TaskController.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Controllers\\TaskController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TaskController.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Controllers\\TaskController.cs",
+              "RelativeToolTip": "Controllers\\TaskController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:49:35.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChangeStatusDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\ChangeStatusDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\ChangeStatusDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\ChangeStatusDto.cs",
+              "RelativeToolTip": "DTOs\\ChangeStatusDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:10:48.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UpdateTaskItemDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\UpdateTaskItemDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UpdateTaskItemDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\UpdateTaskItemDto.cs",
+              "RelativeToolTip": "DTOs\\UpdateTaskItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:10:33.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateTaskItemDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\CreateTaskItemDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateTaskItemDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\CreateTaskItemDto.cs",
+              "RelativeToolTip": "DTOs\\CreateTaskItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:10:18.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateUserDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\CreateUserDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\CreateUserDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\CreateUserDto.cs",
+              "RelativeToolTip": "DTOs\\CreateUserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:10:04.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserWithTasksDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\UserWithTasksDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserWithTasksDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\UserWithTasksDto.cs",
+              "RelativeToolTip": "DTOs\\UserWithTasksDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:09:44.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TaskItemResponseDto.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\TaskItemResponseDto.cs",
+              "RelativeDocumentMoniker": "DTOs\\TaskItemResponseDto.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\TaskItemResponseDto.cs",
+              "RelativeToolTip": "DTOs\\TaskItemResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:09:20.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "DTOs\\ApiResponse.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\DTOs\\ApiResponse.cs",
+              "RelativeToolTip": "DTOs\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:07:04.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:06:25.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Taskitem.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Models\\Taskitem.cs",
+              "RelativeDocumentMoniker": "Models\\Taskitem.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Models\\Taskitem.cs",
+              "RelativeToolTip": "Models\\Taskitem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:06:11.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\UserRepository.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Implementations\\UserRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:05:34.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Implementations\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Implementations\\TaskRepository.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Implementations\\TaskRepository.cs",
+              "RelativeToolTip": "Repositories\\Implementations\\TaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:05:09.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:04:40.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITaskRepository.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\Interfaces\\ITaskRepository.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Repositories\\Interfaces\\ITaskRepository.cs",
+              "RelativeToolTip": "Repositories\\Interfaces\\ITaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:04:04.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\UserService.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Implementations\\UserService.cs",
+              "RelativeToolTip": "Service\\Implementations\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:02:26.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Implementations\\TaskService.cs",
+              "RelativeDocumentMoniker": "Service\\Implementations\\TaskService.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Implementations\\TaskService.cs",
+              "RelativeToolTip": "Service\\Implementations\\TaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:02:02.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Service\\Interfaces\\IUserService.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Service\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T04:00:07.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Interfaces\\ITaskService.cs",
+              "RelativeDocumentMoniker": "Service\\Interfaces\\ITaskService.cs",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Service\\Interfaces\\ITaskService.cs",
+              "RelativeToolTip": "Service\\Interfaces\\ITaskService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-19T03:59:17.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Task Management System",
+              "DocumentMoniker": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Task Management System.csproj",
+              "RelativeDocumentMoniker": "Task Management System.csproj",
+              "ToolTip": "Z:\\activity main folder\\Taskmanagement system\\backend\\Task Management System\\Task Management System.csproj",
+              "RelativeToolTip": "Task Management System.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-19T03:35:19.359Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
