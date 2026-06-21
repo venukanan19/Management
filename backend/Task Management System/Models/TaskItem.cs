@@ -1,6 +1,6 @@
 ﻿namespace Task_Management_System.Models
 {
-    public class Taskitem
+    public class TaskItem
     {
         public int TaskId { get; set; }
         public string Title { get; set; }

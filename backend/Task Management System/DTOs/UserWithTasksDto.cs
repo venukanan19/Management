@@ -2,7 +2,7 @@
 {
     public class UserWithTasksDto
     {
-        public int UserID { get; set; }
+        public int UserId { get; set; }
         public String UserName { get; set; }
         public String Email { get; set; }
         public List<TaskItemResponseDto> Tasks { get; set; }
