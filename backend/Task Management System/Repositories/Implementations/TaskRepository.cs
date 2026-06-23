@@ -7,6 +7,10 @@ namespace Task_Management_System.Repositories.Implementations
     public class TaskRepository
     {
         private readonly string _connectionString;
+        public TaskRepository(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("DefaultConnection");
+        }
 
         public List<TaskItemResponseDto> GetAllTasks()
         {
@@ -86,6 +90,7 @@ namespace Task_Management_System.Repositories.Implementations
                 SET Title = @Title,
                     Description = @Description,
                     Status = @Status
+                    UserId=@UserId
                 WHERE TaskId = @TaskId";
 
             using var cmd = new SqlCommand(sql, connection);
