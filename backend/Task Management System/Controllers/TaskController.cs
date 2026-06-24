@@ -1,11 +1,68 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Task_Management_System.DTOs;
+using Task_Management_System.Services.Interfaces;
 
 namespace Task_Management_System.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class TaskController : ControllerBase
     {
+        private readonly ITaskService _taskService;
+
+        public TaskController(ITaskService taskService)
+        {
+            _taskService = taskService;
+        }
+
+        [HttpPost("add")]
+        public IActionResult AddTask(CreateTaskItemDto dto)
+        {
+            var result = _taskService.AddTask(dto);
+            return Ok(result);
+        }
+
+        [HttpGet("all")]
+        public IActionResult GetAllTasks()
+        {
+            var tasks = _taskService.GetAllTasks();
+            return Ok(tasks);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetTaskById(int id)
+        {
+            var task = _taskService.GetTaskById(id);
+            if (task == null) return NotFound();
+            return Ok(task);
+        }
+
+        [HttpPut("update/{id}")]
+        public IActionResult UpdateTask(int id, UpdateTaskItemDto dto)
+        {
+            var result = _taskService.UpdateTask(id, dto);
+            return Ok(result);
+        }
+
+        [HttpPut("changestatus/{id}")]
+        public IActionResult ChangeStatus(int id, ChangeStatusDto dto)
+        {
+            var result = _taskService.ChangeStatus(id, dto);
+            return Ok(result);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteTask(int id)
+        {
+            var result = _taskService.DeleteTask(id);
+            return Ok(result);
+        }
+
+        [HttpGet("search")]
+        public IActionResult SearchTasks(string keyword)
+        {
+            var tasks = _taskService.SearchTasks(keyword);
+            return Ok(tasks);
+        }
     }
 }

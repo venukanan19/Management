@@ -7,13 +7,14 @@ using Task_Management_System.Repositories.Interfaces;
 
 namespace Task_Management_System.Repositories.Implementations
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
         private readonly string _connectionString;
 
         public UserRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration
+                .GetConnectionString("DefaultConnection")!;
         }
 
         public int AddUser(CreateUserDto dto)
@@ -32,9 +33,9 @@ namespace Task_Management_System.Repositories.Implementations
             return Convert.ToInt32(cmd.ExecuteScalar());
         }
 
-        public List<User> GetAllUsers()
+        public List<UserWithTasksDto> GetAllUsers()
         {
-            var users = new List<User>();
+            var users = new List<UserWithTasksDto>();
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
 
@@ -44,18 +45,20 @@ namespace Task_Management_System.Repositories.Implementations
 
             while (reader.Read())
             {
-                users.Add(new User
+                users.Add(new UserWithTasksDto
                 {
                     UserId = (int)reader["UserId"],
                     UserName = reader["UserName"].ToString(),
-                    Email = reader["Email"].ToString()
+                    Email = reader["Email"].ToString(),
+                    Tasks = new List<TaskItemResponseDto>()
                 });
             }
 
             return users;
         }
 
-        public User GetUserById(int id)
+
+        public UserWithTasksDto? GetUserById(int id)
         {
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
@@ -68,7 +71,7 @@ namespace Task_Management_System.Repositories.Implementations
             using var reader = cmd.ExecuteReader();
             if (reader.Read())
             {
-                return new User
+                return new UserWithTasksDto
                 {
                     UserId = (int)reader["UserId"],
                     UserName = reader["UserName"].ToString(),
@@ -122,5 +125,18 @@ namespace Task_Management_System.Repositories.Implementations
 
             return userWithTasks;
         }
+        public int DeleteUser(int id)
+{
+    using var connection = new SqlConnection(_connectionString);
+    connection.Open();
+    var sql = "DELETE FROM Users WHERE UserId = @Id";
+    using var cmd = new SqlCommand(sql, connection);
+    cmd.Parameters.AddWithValue("@Id", id);
+    return cmd.ExecuteNonQuery();
+}
+
     }
 }
+
+    
+        

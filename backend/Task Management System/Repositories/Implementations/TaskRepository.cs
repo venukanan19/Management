@@ -1,15 +1,17 @@
 ﻿using Microsoft.Data.SqlClient;
 using Task_Management_System.DTOs;
 using Task_Management_System.Models;
+using Task_Management_System.Repositories.Interfaces;
 
 namespace Task_Management_System.Repositories.Implementations
 {
-    public class TaskRepository
+    public class TaskRepository : ITaskRepository
     {
         private readonly string _connectionString;
         public TaskRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection");
+            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+
         }
 
         public List<TaskItemResponseDto> GetAllTasks()
@@ -37,7 +39,7 @@ namespace Task_Management_System.Repositories.Implementations
             return tasks;
         }
 
-        public TaskItemResponseDto GetTaskById(int id)
+        public TaskItemResponseDto? GetTaskById(int id)
         {
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
@@ -145,17 +147,14 @@ namespace Task_Management_System.Repositories.Implementations
             return tasks;
         }
 
-        public int ChangeStatus(int id, string newStatus)
+        public int ChangeStatus(int id, ChangeStatusDto dto)
         {
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
 
-            var sql = @"UPDATE Tasks
-                SET Status = @Status
-                WHERE TaskId = @TaskId";
-
+            var sql = @"UPDATE Tasks SET Status = @Status WHERE TaskId = @TaskId";
             using var cmd = new SqlCommand(sql, connection);
-            cmd.Parameters.AddWithValue("@Status", newStatus);
+            cmd.Parameters.AddWithValue("@Status", dto.Status);
             cmd.Parameters.AddWithValue("@TaskId", id);
 
             return cmd.ExecuteNonQuery();
