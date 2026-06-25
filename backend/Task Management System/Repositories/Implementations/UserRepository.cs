@@ -93,7 +93,7 @@ namespace Task_Management_System.Repositories.Implementations
             connection.Open();
 
             var sql = @"SELECT u.UserId, u.Username, u.Email,
-                        t. TaskId, t.Title, t.Description, t.Status FROM Users u
+                        t.TaskId, t.Title, t.Description, t.Status FROM Users u
                         LEFT JOIN Tasks t ON u.UserId = t.UserId
                         WHERE u.UserId = @UserId";
 

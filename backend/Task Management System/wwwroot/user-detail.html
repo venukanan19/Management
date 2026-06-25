@@ -2,9 +2,27 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>User Detail</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+    <h1>User Detail</h1>
 
+    <nav>
+        <ul>
+            <li><a href="users.html">Back to Users</a></li>
+        </ul>
+    </nav>
+
+    <h2 id="userName">Loading...</h2>
+    <p id="userEmail"></p>
+
+    <h3>Tasks</h3>
+    <div id="taskList">Loading...</div>
+
+    <script src="app.js"></script>
+    <script>
+    loadUserDetail();
+    </script>
 </body>
 </html>

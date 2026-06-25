@@ -8,6 +8,9 @@ namespace Task_Management_System.Services.Implementations
     {
         private readonly ITaskRepository _taskRepository;
 
+        // Allowed status values, matches DB CHECK constraint
+        private static readonly string[] ValidStatuses = { "Todo", "In Progress", "Done" };
+
         public TaskService(ITaskRepository taskRepository)
         {
             _taskRepository = taskRepository;
@@ -17,6 +20,9 @@ namespace Task_Management_System.Services.Implementations
         {
             if (string.IsNullOrWhiteSpace(dto.Title))
                 throw new ArgumentException("Task title cannot be empty");
+
+            if (string.IsNullOrWhiteSpace(dto.Status) || !ValidStatuses.Contains(dto.Status))
+                throw new ArgumentException("Status must be Todo, In Progress, or Done.");
 
             return _taskRepository.AddTask(dto);
         }
@@ -39,6 +45,9 @@ namespace Task_Management_System.Services.Implementations
             if (id <= 0)
                 throw new ArgumentException("Invalid task ID");
 
+            if (string.IsNullOrWhiteSpace(dto.Status) || !ValidStatuses.Contains(dto.Status))
+                throw new ArgumentException("Status must be Todo, In Progress, or Done.");
+
             return _taskRepository.UpdateTask(id, dto);
         }
 
@@ -47,8 +56,8 @@ namespace Task_Management_System.Services.Implementations
             if (id <= 0)
                 throw new ArgumentException("Invalid task ID");
 
-            if (string.IsNullOrWhiteSpace(dto.Status))
-                throw new ArgumentException("Status cannot be empty");
+            if (string.IsNullOrWhiteSpace(dto.Status) || !ValidStatuses.Contains(dto.Status))
+                throw new ArgumentException("Status must be Todo, In Progress, or Done.");
 
             return _taskRepository.ChangeStatus(id, dto);
         }

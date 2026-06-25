@@ -2,9 +2,37 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Users</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+    <h1>Users</h1>
 
+    <nav>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="tasks.html">View Tasks</a></li>
+            <li><a href="add-task.html">Add Task</a></li>
+        </ul>
+    </nav>
+
+    <h2>Add New User</h2>
+    <form id="addUserForm" onsubmit="submitAddUser(event)">
+        <label for="userName">Name</label><br>
+        <input type="text" id="userName" maxlength="100" /><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" maxlength="100" /><br><br>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <h2>All Users</h2>
+    <div id="userList">Loading...</div>
+
+    <script src="app.js"></script>
+    <script>
+    loadUsers();
+    </script>
 </body>
 </html>

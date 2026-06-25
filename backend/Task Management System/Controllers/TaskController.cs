@@ -18,51 +18,64 @@ namespace Task_Management_System.Controllers
         [HttpPost("add")]
         public IActionResult AddTask(CreateTaskItemDto dto)
         {
-            var result = _taskService.AddTask(dto);
-            return Ok(result);
+            try
+            {
+                var result = _taskService.AddTask(dto);
+                return Ok(new { success = true, data = result });
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { success = false, message = ex.Message, errors = new[] { ex.Message } });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(new { success = false, message = ex.Message });
+            }
         }
 
         [HttpGet("all")]
         public IActionResult GetAllTasks()
         {
             var tasks = _taskService.GetAllTasks();
-            return Ok(tasks);
+            return Ok(new { success = true, data = tasks });
         }
 
         [HttpGet("{id}")]
         public IActionResult GetTaskById(int id)
         {
             var task = _taskService.GetTaskById(id);
-            if (task == null) return NotFound();
-            return Ok(task);
+            if (task == null)
+                return NotFound(new { success = false, message = "Task not found" });
+
+            return Ok(new { success = true, data = task });
         }
 
         [HttpPut("update/{id}")]
         public IActionResult UpdateTask(int id, UpdateTaskItemDto dto)
         {
             var result = _taskService.UpdateTask(id, dto);
-            return Ok(result);
+            return Ok(new { success = true, data = result });
         }
 
         [HttpPut("changestatus/{id}")]
         public IActionResult ChangeStatus(int id, ChangeStatusDto dto)
         {
             var result = _taskService.ChangeStatus(id, dto);
-            return Ok(result);
+            return Ok(new { success = true, data = result });
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteTask(int id)
         {
             var result = _taskService.DeleteTask(id);
-            return Ok(result);
+            return Ok(new { success = true, data = result });
         }
 
         [HttpGet("search")]
         public IActionResult SearchTasks(string keyword)
         {
             var tasks = _taskService.SearchTasks(keyword);
-            return Ok(tasks);
+            return Ok(new { success = true, data = tasks });
         }
     }
 }

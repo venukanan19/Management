@@ -20,7 +20,11 @@ namespace Task_Management_System.Repositories.Implementations
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
 
-            var sql = "SELECT TaskId, Title, Description, Status, UserId FROM Tasks";
+            var sql = @"SELECT t.TaskId, t.Title, t.Description, t.Status, t.CreatedDate,
+                       t.UserId, u.UserName
+                FROM Tasks t
+                INNER JOIN Users u ON t.UserId = u.UserId";
+
             using var cmd = new SqlCommand(sql, connection);
             using var reader = cmd.ExecuteReader();
 
@@ -32,7 +36,9 @@ namespace Task_Management_System.Repositories.Implementations
                     Title = reader["Title"].ToString(),
                     Description = reader["Description"].ToString(),
                     Status = reader["Status"].ToString(),
-                    UserId = (int)reader["UserId"]
+                    CreatedDate = (DateTime)reader["CreatedDate"],
+                    UserId = (int)reader["UserId"],
+                    UserName = reader["UserName"].ToString()
                 });
             }
 
@@ -44,7 +50,11 @@ namespace Task_Management_System.Repositories.Implementations
             using var connection = new SqlConnection(_connectionString);
             connection.Open();
 
-            var sql = @"SELECT TaskId, Title, Description, Status, UserId FROM Tasks WHERE TaskId=@TaskId";
+            var sql = @"SELECT t.TaskId, t.Title, t.Description, t.Status, t.CreatedDate,
+                       t.UserId, u.UserName
+                FROM Tasks t
+                INNER JOIN Users u ON t.UserId = u.UserId
+                WHERE t.TaskId = @TaskId";
 
             using var cmd = new SqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@TaskId", id);
@@ -54,11 +64,13 @@ namespace Task_Management_System.Repositories.Implementations
             {
                 return new TaskItemResponseDto
                 {
-                    UserId = (int)reader["UserId"],
                     TaskId = (int)reader["TaskId"],
                     Title = reader["Title"].ToString(),
                     Description = reader["Description"].ToString(),
-                    Status = reader["Status"].ToString()
+                    Status = reader["Status"].ToString(),
+                    CreatedDate = (DateTime)reader["CreatedDate"],
+                    UserId = (int)reader["UserId"],
+                    UserName = reader["UserName"].ToString()
                 };
             }
 
@@ -92,13 +104,14 @@ namespace Task_Management_System.Repositories.Implementations
                 SET Title = @Title,
                     Description = @Description,
                     Status = @Status
-                    UserId=@UserId
+                    UserId=@UserId,
                 WHERE TaskId = @TaskId";
 
             using var cmd = new SqlCommand(sql, connection);
             cmd.Parameters.AddWithValue("@Title", dto.Title);
             cmd.Parameters.AddWithValue("@Description", dto.Description);
             cmd.Parameters.AddWithValue("@Status", dto.Status);
+            cmd.Parameters.AddWithValue("@UserId", dto.UserId);
             cmd.Parameters.AddWithValue("@TaskId", id);
 
             return cmd.ExecuteNonQuery();

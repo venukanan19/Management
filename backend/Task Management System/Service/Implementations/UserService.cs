@@ -14,7 +14,6 @@ namespace Task_Management_System.Services.Implementations
             _userRepository = userRepository;
         }
 
-   
         public int AddUser(CreateUserDto dto)
         {
             if (string.IsNullOrWhiteSpace(dto.UserName))
@@ -23,22 +22,13 @@ namespace Task_Management_System.Services.Implementations
             if (string.IsNullOrWhiteSpace(dto.Email))
                 throw new ArgumentException("Email cannot be empty");
 
-
             return _userRepository.AddUser(dto);
         }
 
         public List<UserWithTasksDto> GetAllUsers()
         {
-            var users = _userRepository.GetAllUsers();
-            return users.Select(u => new UserWithTasksDto
-            {
-                UserId = u.UserId,
-                UserName = u.UserName,
-                Email = u.Email,
-                Tasks = new List<TaskItemResponseDto>() 
-            }).ToList();
+            return _userRepository.GetAllUsers();
         }
-
 
         public UserWithTasksDto? GetUserById(int id)
         {
@@ -57,6 +47,20 @@ namespace Task_Management_System.Services.Implementations
             };
         }
 
+        // ← புது method
+        public UserWithTasksDto? GetUserWithTasks(int id)
+        {
+            if (id <= 0)
+                throw new ArgumentException("Invalid user ID");
+
+            var userWithTasks = _userRepository.GetUserWithTasks(id);
+
+            // Repository-ல user இல்லாட்டி UserId default(0)-ஆ இருக்கும்
+            if (userWithTasks.UserId == 0)
+                return null;
+
+            return userWithTasks;
+        }
 
         public int DeleteUser(int id)
         {

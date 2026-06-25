@@ -2,9 +2,32 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body>
+    <h1>Dashboard</h1>
 
+    <!-- Counts -->
+    <div class="dashboard">
+        <div class="card">Total Tasks: <span id="totalCount">0</span></div>
+        <div class="card">Todo: <span id="todoCount">0</span></div>
+        <div class="card">In Progress: <span id="progressCount">0</span></div>
+        <div class="card">Done: <span id="doneCount">0</span></div>
+    </div>
+
+    <!-- Quick Links -->
+    <nav>
+        <ul>
+            <li><a href="tasks.html">View Tasks</a></li>
+            <li><a href="add-task.html">Add Task</a></li>
+            <li><a href="users.html">Manage Users</a></li>
+        </ul>
+    </nav>
+
+    <script src="app.js"></script>
+    <script>
+    loadDashboard();
+    </script>
 </body>
 </html>
