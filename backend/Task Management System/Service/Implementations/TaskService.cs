@@ -21,11 +21,16 @@ namespace Task_Management_System.Services.Implementations
             if (string.IsNullOrWhiteSpace(dto.Title))
                 throw new ArgumentException("Task title cannot be empty");
 
-            if (string.IsNullOrWhiteSpace(dto.Status) || !ValidStatuses.Contains(dto.Status))
+            if (string.IsNullOrWhiteSpace(dto.Status))
+                throw new ArgumentException("Status cannot be empty");
+
+            var validStatuses = new List<string> { "Todo", "In Progress", "Done" };
+            if (!validStatuses.Contains(dto.Status))
                 throw new ArgumentException("Status must be Todo, In Progress, or Done.");
 
             return _taskRepository.AddTask(dto);
         }
+
 
         public List<TaskItemResponseDto> GetAllTasks()
         {
@@ -45,11 +50,16 @@ namespace Task_Management_System.Services.Implementations
             if (id <= 0)
                 throw new ArgumentException("Invalid task ID");
 
-            if (string.IsNullOrWhiteSpace(dto.Status) || !ValidStatuses.Contains(dto.Status))
+            if (string.IsNullOrWhiteSpace(dto.Status))
+                throw new ArgumentException("Status cannot be empty");
+
+            var validStatuses = new List<string> { "Todo", "In Progress", "Done" };
+            if (!validStatuses.Contains(dto.Status))
                 throw new ArgumentException("Status must be Todo, In Progress, or Done.");
 
             return _taskRepository.UpdateTask(id, dto);
         }
+
 
         public int ChangeStatus(int id, ChangeStatusDto dto)
         {

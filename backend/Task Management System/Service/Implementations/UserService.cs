@@ -14,6 +14,8 @@ namespace Task_Management_System.Services.Implementations
             _userRepository = userRepository;
         }
 
+        private List<CreateUserDto> _users = new List<CreateUserDto>();
+
         public int AddUser(CreateUserDto dto)
         {
             if (string.IsNullOrWhiteSpace(dto.UserName))
@@ -22,8 +24,9 @@ namespace Task_Management_System.Services.Implementations
             if (string.IsNullOrWhiteSpace(dto.Email))
                 throw new ArgumentException("Email cannot be empty");
 
-            return _userRepository.AddUser(dto);
+            return _userRepository.AddUser(dto); // save to DB
         }
+
 
         public List<UserWithTasksDto> GetAllUsers()
         {
@@ -47,7 +50,7 @@ namespace Task_Management_System.Services.Implementations
             };
         }
 
-        // ← புது method
+    
         public UserWithTasksDto? GetUserWithTasks(int id)
         {
             if (id <= 0)
@@ -55,7 +58,6 @@ namespace Task_Management_System.Services.Implementations
 
             var userWithTasks = _userRepository.GetUserWithTasks(id);
 
-            // Repository-ல user இல்லாட்டி UserId default(0)-ஆ இருக்கும்
             if (userWithTasks.UserId == 0)
                 return null;
 

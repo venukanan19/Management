@@ -59,7 +59,8 @@ namespace Task_Management_System
             app.MapControllers();
 
 
-            app.MapGet("/", () => "Task Management System API is running...");
+            app.MapGet("/", () => Results.Redirect("/dashboard.html"));
+
 
             app.Run();
         }

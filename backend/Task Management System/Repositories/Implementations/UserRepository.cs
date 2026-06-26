@@ -9,17 +9,18 @@ namespace Task_Management_System.Repositories.Implementations
 {
     public class UserRepository : IUserRepository
     {
-        private readonly string _connectionString;
+        private readonly IConfiguration _connectionString;
 
         public UserRepository(IConfiguration configuration)
         {
-            _connectionString = configuration
-                .GetConnectionString("DefaultConnection")!;
+            _connectionString = configuration;
+                
         }
 
         public int AddUser(CreateUserDto dto)
         {
-            using var connection = new SqlConnection(_connectionString);
+            string Connectionstring = _connectionString.GetConnectionString("DefaultConnection")!;
+            using var connection = new SqlConnection(Connectionstring);
             connection.Open();
 
             var sql = @"INSERT INTO Users (UserName, Email)
@@ -35,8 +36,10 @@ namespace Task_Management_System.Repositories.Implementations
 
         public List<UserWithTasksDto> GetAllUsers()
         {
+            string Connectionstring = _connectionString.GetConnectionString("DefaultConnection")!;
+
             var users = new List<UserWithTasksDto>();
-            using var connection = new SqlConnection(_connectionString);
+            using var connection = new SqlConnection(Connectionstring);
             connection.Open();
 
             var sql = "SELECT UserId, UserName, Email FROM Users";
@@ -60,7 +63,9 @@ namespace Task_Management_System.Repositories.Implementations
 
         public UserWithTasksDto? GetUserById(int id)
         {
-            using var connection = new SqlConnection(_connectionString);
+            string Connectionstring = _connectionString.GetConnectionString("DefaultConnection")!;
+
+            using var connection = new SqlConnection(Connectionstring);
             connection.Open();
 
             var sql = @"SELECT UserId, UserName, Email FROM Users WHERE UserId=@UserId";
@@ -84,12 +89,14 @@ namespace Task_Management_System.Repositories.Implementations
 
         public UserWithTasksDto GetUserWithTasks(int id)
         {
+            string Connectionstring = _connectionString.GetConnectionString("DefaultConnection")!;
+
             var userWithTasks = new UserWithTasksDto
             {
                 Tasks = new List<TaskItemResponseDto>()
             };
 
-            using var connection = new SqlConnection(_connectionString);
+            using var connection = new SqlConnection(Connectionstring);
             connection.Open();
 
             var sql = @"SELECT u.UserId, u.Username, u.Email,
@@ -127,7 +134,9 @@ namespace Task_Management_System.Repositories.Implementations
         }
         public int DeleteUser(int id)
 {
-    using var connection = new SqlConnection(_connectionString);
+            string Connectionstring = _connectionString.GetConnectionString("DefaultConnection")!;
+
+            using var connection = new SqlConnection(Connectionstring);
     connection.Open();
     var sql = "DELETE FROM Users WHERE UserId = @Id";
     using var cmd = new SqlCommand(sql, connection);
